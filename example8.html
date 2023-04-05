@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun()
+        {
+            document.getElementById("color1").focus();
+        }
+        function fun1()
+        {
+            document.getElementById("btn").style.backgroundColor='green';
+        }
+        function fun2()
+        {
+            document.getElementById("btn").style.backgroundColor='';
+        }
+        function changeColor()
+        {
+           document.getElementById("color1").style.backgroundColor='green';
+           document.getElementById("color2").style.backgroundColor='';
+        }
+        function removeColor()
+        {
+           document.getElementById("color1").style.backgroundColor='';
+           document.getElementById("color2").style.backgroundColor='green';
+        }
+    </script>
+</head>
+<body onload="fun()">
+    <input type="text" onfocus="changeColor()" onblur="removeColor()" id="color1" />
+    <br><br>
+    <input type="text"  id="color2" />
+    <br><br>
+    <input type="button" id="btn" value="Click" onmouseover="fun1()" onmouseout="fun2()" />
+</body>
+</html>

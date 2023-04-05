@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showdata(a)
+        {
+            document.getElementById("content").innerHTML=a;
+        }
+        function askquestion()
+        {
+            var s = prompt("I have question?plz answer");
+            if(s!=null)
+           document.getElementById("question").innerHTML="Question is "+s;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="askquestion()" > Raise Question </button>
+    <div id="content" id="display" style="width:800px;height: 300px; background-color: black;color:white;">
+
+    </div>
+    <span id="question"></span>
+    <br>
+    <textarea rows="10" cols="100" id="txtboard" onkeyup="showdata(this.value)" ></textarea>
+</body>
+</html>
